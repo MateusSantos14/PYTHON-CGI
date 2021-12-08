@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Conversão monetária</h1>
+        <a href="index.html"> <-Retornar para página inicial</a><br>
+        <table>
+            <form action="cgi-bin/monetario.py" method="post">
+            <tr>
+                <th>
+                    Valor
+                    <input type="text" name="valor">
+                </th>
+
+                <th>
+                    Atual
+                    <select name=atual>
+                        <option value="null" selected>Selecione</option>
+                        <option value="real">Real</option>
+                        <option value="dolar">Dólar</option>
+                    </select>
+                </th>
+                <th>
+                    Nova
+                    <select name=nova>
+                        <option value="null" selected>Selecione</option>
+                        <option value="real">Real</option>
+                        <option value="dolar">Dólar</option>
+                    </select><br>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <button>Enviar</button>
+                </th>
+            </tr>
+            </form>
+        </table>
+    </body>
+</html>

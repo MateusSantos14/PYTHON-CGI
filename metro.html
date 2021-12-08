@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Conversão de metragem</h1>
+        <a href="index.html"> -Retornar para página inicial</a><br>
+        <table>
+            <form action="cgi-bin/metro.py" method="post">
+            <tr>
+                <th>
+                    Valor
+                    <input type="text" name="valor">
+                </th>
+
+                <th>
+                    Atual
+                    <select name=atual>
+                        <option value="null" selected>Selecione</option>
+                        <option value="mm">Milímetros</option>
+                        <option value="cm">Centímetro</option>
+                        <option value="dm">Decímetro</option>
+                        <option value="m">Metro</option>
+                        <option value="dam">Decâmetro</option>
+                        <option value="hc">Hectômetro</option>
+                        <option value="km">Quilômetro</option>
+                    </select>
+                </th>
+                <th>
+                    Nova
+                    <select name=nova>
+                        <option value="null" selected>Selecione</option>
+                        <option value="mm">Milímetros</option>
+                        <option value="cm">Centímetro</option>
+                        <option value="dm">Decímetro</option>
+                        <option value="m">Metro</option>
+                        <option value="dam">Decâmetro</option>
+                        <option value="hc">Hectômetro</option>
+                        <option value="km">Quilômetro</option>
+                    </select><br>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <button>Enviar</button>
+                </th>
+            </tr>
+            </form>
+        </table>
+    </body>
+</html>
