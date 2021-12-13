@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Conversão de tempo</h1>
-        <a href="index.html"> -Retornar para página inicial</a><br>
+        <h1 id="element">Conversão de tempo</h1>
         <table>
             <form action="cgi-bin/tempo.py" method="post">
             <tr>
-                <th>
-                    Valor
+                <td id="element">
+                    Valor<br>
                     <input type="text" name="valor">
-                </th>
+                </td>
 
-                <th>
-                    Atual
+                <td id="element">
+                    Atual<br>
                     <select name=atual>
                         <option value="null" selected>Selecione</option>
                         <option value="segundo">Segundos</option>
                         <option value="minuto">Minutos</option>
                         <option value="hora">Horas</option>
-                        <option value="dia">Dias</option>
-                        <option value="mes">Meses</option>
-                        <option value="ano">Anos</option>
                     </select>
-                </th>
-                <th>
-                    Nova
+                </td>
+                <td id="element">
+                    Nova<br>
                     <select name=nova>
                         <option value="null" selected>Selecione</option>
                         <option value="segundo">Segundos</option>
                         <option value="minuto">Minutos</option>
                         <option value="hora">Horas</option>
-                        <option value="dia">Dias</option>
-                        <option value="mes">Meses</option>
-                        <option value="ano">Anos</option>
                     </select><br>
-                </th>
+                </td>
             </tr>
             <tr>
-                <th colspan="3">
+                <td colspan="3" id="element">
                     <button>Enviar</button>
-                </th>
+                </td>
             </tr>
             </form>
         </table>

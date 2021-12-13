@@ -1,16 +1,25 @@
 <!DOCTYPE html><!-- py -m http.server 8080 --cgi -->
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <nav id="menu">
-            <ul>
-                <li><a href="tempo.html">Conversão tempo</a></li>
-                <li><a href="metro.html">Conversão metros</a></li>
-                <li><a href="monetario.html">Conversão monetária</a></li>
-            </ul>
-        </nav>       
+        <div>
+            <table>
+                <tr id="element">
+                    <td colspan="3">
+                        <h1>Programa de conversões</h1>
+                        <h2>Disciplina: Sistemas Operacionais de Redes 2</h2>
+                        <h2>Aluno: Mateus Pereira Santos</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="frames"><iframe src="tempo.html" height="250" width="100%" frameBorder="0"></iframe></td>
+                    <td id="frames"><iframe src="metro.html" height="250" width="100%" frameBorder="0"></iframe></td>
+                    <td id="frames"><iframe src="monetario.html" height="250" width="100%" frameBorder="0"></iframe></td>
+                </tr>
+            </table>
+        </nav>
     </body>
 </html>

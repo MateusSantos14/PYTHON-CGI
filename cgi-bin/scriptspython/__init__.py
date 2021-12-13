@@ -1,5 +1,10 @@
 import requests
 import json
+import sys
+
+def enc_print(string='', encoding='utf8'):
+    sys.stdout.buffer.write(string.encode(encoding) + b'\n')
+
 
 class TempoCalculo():
     def calcular(self,valor,atual, novo):
@@ -11,12 +16,12 @@ class TempoCalculo():
             resultado = float(valor)
         except:
             return "valor invalido"
-        valores = [1,60,60,24,30,12]
+        valores = [60,60,60]
 
         if atual==novo:
             return resultado
         elif atual>novo:
-            for x in range(atual,novo-1,-1):
+            for x in range(atual-1,novo-1,-1):
                 resultado = resultado * valores[x]
             return round(resultado,2)
         elif atual<novo:
@@ -31,12 +36,6 @@ class TempoCalculo():
             return 1
         elif nome=="hora":
             return 2
-        elif nome=="dia":
-            return 3
-        elif nome=="mes":
-            return 4
-        elif nome=="ano":
-            return 5
         else:
             return "valor invalido"  
 
@@ -96,14 +95,13 @@ class MonetarioCalculadora:
         except:
             return "valor invalido"
         
-        
         valores = [[1, self.pegarcotacao()],
                    [self.pegarcotacao(),1]]
 
-        if atual<novo:
+        if novo>atual:
             resultado /= valores[atual][novo] 
-        elif novo>atual:
-            esultado *= valores[atual][novo]
+        elif novo<atual:
+            resultado *= valores[atual][novo]
         return round(resultado,2)
 
     def converternames(self, nome):
